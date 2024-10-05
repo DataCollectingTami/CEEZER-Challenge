@@ -1,0 +1,239 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-05T17:06:28.204Z",
+    "end": "2024-10-05T17:06:44.111Z",
+    "duration": 15907,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3983d520-8238-4f1b-9809-c0edc9479b5c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SignupPage.cy.js",
+      "file": "cypress\\e2e\\SignupPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "77a9d6fa-ed90-47ab-9d23-43f6bfbf8b23",
+          "title": "Signup Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+              "title": "Valid Signup Actions",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "toggles between Buyer and Supplier",
+                  "fullTitle": "Signup Page Valid Signup Actions toggles between Buyer and Supplier",
+                  "timedOut": null,
+                  "duration": 1873,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//toggle buyer \nsignup.getSelectBuyerButton().click();\nsignup.getSelectBuyerButton().should(\"have.class\", \"css-yjcvqi\");\ncy.skipMobile(() => {\n  cy.contains(\"Future-proof carbon credit portfolios—guided by data.\").should(\"be.visible\");\n}); // only visible on desktop\n//toggle supplier\nsignup.getSelectSupplierButton().click();\nsignup.getSelectSupplierButton().should(\"have.class\", \"css-yjcvqi\");\ncy.skipMobile(() => {\n  cy.contains(\"Join global net-zero portfolios—seamlessly.\").should(\"be.visible\");\n}); // only visible on desktop",
+                  "err": {},
+                  "uuid": "acbb3918-28a7-4330-ba43-e9cde680802e",
+                  "parentUUID": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "navigates to the login page",
+                  "fullTitle": "Signup Page Valid Signup Actions navigates to the login page",
+                  "timedOut": null,
+                  "duration": 988,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//via login button\nsignup.getLoginButton().click();\ncy.url().should(\"include\", \"/sign-in\");\n//via logo\nsignup.getLogo().click();\ncy.url().should(\"include\", \"/sign-in\");",
+                  "err": {},
+                  "uuid": "749f888b-3b91-45bd-841a-0c9ca1178551",
+                  "parentUUID": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "tests back button on Page 2 and checks if data is saved",
+                  "fullTitle": "Signup Page Valid Signup Actions tests back button on Page 2 and checks if data is saved",
+                  "timedOut": null,
+                  "duration": 2322,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.CompletePage1();\nsignup.getBackButton().should(\"be.visible\");\nsignup.getBackButton().click();\n//assert that we are on Page 1\nsignup.getSignUpButton().should(\"be.visible\");\nsignup.getCreateAccountButton().should(\"not.exist\");\n//assert that the data is saved\nsignup.getCompanyNameInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");\nsignup.getEmailInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");\nsignup.getFirstNameInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");\nsignup.getLastNameInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");",
+                  "err": {},
+                  "uuid": "cf0929d0-3aad-4c37-8530-e5fddbecc460",
+                  "parentUUID": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "acbb3918-28a7-4330-ba43-e9cde680802e",
+                "749f888b-3b91-45bd-841a-0c9ca1178551",
+                "cf0929d0-3aad-4c37-8530-e5fddbecc460"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5183,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+              "title": "Field Validations",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "displays validation error when email format is invalid",
+                  "fullTitle": "Signup Page Field Validations displays validation error when email format is invalid",
+                  "timedOut": null,
+                  "duration": 2264,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.CompletePage1InvalidEmail(\"tami email com\");\nsignup.getSignUpButton().click();\nsignup.getEmailInput().invoke(\"attr\", \"aria-invalid\").should(\"eq\", \"true\");\ncy.contains(\"Please enter a company email address\").should(\"be.visible\");",
+                  "err": {},
+                  "uuid": "ca008de7-2016-4ca8-9d13-2ed25b3eff75",
+                  "parentUUID": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "displays validation error when personal email is used",
+                  "fullTitle": "Signup Page Field Validations displays validation error when personal email is used",
+                  "timedOut": null,
+                  "duration": 3139,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.CompletePage1InvalidEmail(\"tami@gmail.com\");\nsignup.getSignUpButton().click();\nsignup.getEmailInput().invoke(\"attr\", \"aria-invalid\").should(\"eq\", \"true\");\ncy.contains(\"Please enter a company email address\").should(\"be.visible\");\n//TODO: extend to check other emails that are not allowed",
+                  "err": {},
+                  "uuid": "74eb6ce8-2e9f-40db-b336-5382396e0658",
+                  "parentUUID": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "checks validation for empty fields on Page 1",
+                  "fullTitle": "Signup Page Field Validations checks validation for empty fields on Page 1",
+                  "timedOut": null,
+                  "duration": 3070,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const fields = [{\n  name: \"CompanyName\",\n  message: \"company name\",\n  value: \"Tami Tests Inc\"\n}, {\n  name: \"Email\",\n  message: \"email\",\n  value: \"tami@testinc.com\"\n}, {\n  name: \"FirstName\",\n  message: \"first name\",\n  value: \"Tami\"\n}, {\n  name: \"LastName\",\n  message: \"last name\",\n  value: \"Tests\"\n}];\nsignup.getSignUpButton().click();\n//check validation error for empty fields\ncy.contains(\"Please select account type\").should(\"be.visible\");\nfields.forEach(field => {\n  signup[`get${field.name}Input`]().invoke(\"attr\", \"aria-invalid\").should(\"eq\", \"true\");\n  cy.contains(`Please enter your ${field.message}`).should(\"be.visible\");\n});\n//check that error is hidden when field is filled\nfields.forEach(field => {\n  signup[`fill${field.name}Input`](field.value);\n  signup.getSignUpButton().click();\n  signup[`get${field.name}Input`]().invoke(\"attr\", \"aria-invalid\").should(\"not.exist\");\n  cy.contains(`Please enter your ${field.message}`).should(\"not.exist\");\n});\n//check account type error is hidden when toggled\nsignup.getLastNameInput().clear();\nsignup.getSelectBuyerButton().click();\nsignup.getSignUpButton().click();\ncy.contains(\"Please select account type\").should(\"not.exist\");",
+                  "err": {},
+                  "uuid": "81ef9438-f2bb-4941-b1f4-5ba03d26de83",
+                  "parentUUID": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "ca008de7-2016-4ca8-9d13-2ed25b3eff75",
+                "74eb6ce8-2e9f-40db-b336-5382396e0658",
+                "81ef9438-f2bb-4941-b1f4-5ba03d26de83"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 8473,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
