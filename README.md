@@ -1,6 +1,7 @@
 # Technical Challenge for QA: E2E Testing with Cypress
 
 This repository contains my solution to the QA technical challenge with CEEZER. The challenge is to write and execute e2e tests for the signup flow in Ceezer's staging environment.  
+In addition to the code, I also uploaded a very simple PDF bug report &rarr; CEEZER Challenge - Bugs.pdf 
 
 ## Getting Started
 ### Tech Stack
@@ -8,6 +9,7 @@ This repository contains my solution to the QA technical challenge with CEEZER. 
 - **Cypress**: For E2E testing
 - **Mochawesome**: For generating test reports
 - **Cypress-axe**: For accessibility testing
+- **Cypress Image Snapshots**: For visual tests
 
 
 ### 1. Clone the Repository
@@ -51,6 +53,11 @@ Contains functionality tests for:
 - Checks loading state for slow signup request
 #### 4. SignupAlly.cy.js
 Logs all accessibility violations on Page 1 and Page 2 of signup process in a local report in the folder /Ally Reports/
+#### 5. SignupVisualTests.cy.js
+Visual tests for 
+- Logo
+- Signup Page 1
+- Signup Page 2
 ### Other Important Files
 #### SignupData.json 
 It can be found in /fixtures/. It contain valid signup data used in the flow tests
@@ -68,3 +75,4 @@ npm run merge-reports
 - I focused on showcasing different strategies and using as many cypress features are possible rather than writing consistent and most efficient tests
 - I did not set up different viewport sizes but did write the tests to pass in all devices sizes
 - I used text to select certain elements for simplicity (though it is bad practice)
+- I used cypress-image-snapshots for simple visual tests for simplicity &rarr; it leads to pretty flaky results. There are better tools for visual testing but I did not want to use a tool that requires API keys
