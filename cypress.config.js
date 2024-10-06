@@ -1,4 +1,6 @@
 const { defineConfig } = require("cypress");
+const { addMatchImageSnapshotPlugin } = require('@simonsmith/cypress-image-snapshot/plugin');
+
 
 module.exports = defineConfig({
   //viewportWidth: 365,
@@ -12,6 +14,7 @@ module.exports = defineConfig({
       json: true,
     },
     setupNodeEvents(on, config) {
+      addMatchImageSnapshotPlugin(on, config)
       on('task', {
         logToFile({ message, filename }) {
           const fs = require('fs');
@@ -26,3 +29,4 @@ module.exports = defineConfig({
     },
   },
 });
+

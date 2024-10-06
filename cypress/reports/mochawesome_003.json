@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-05T17:06:46.300Z",
-    "end": "2024-10-05T17:07:06.279Z",
-    "duration": 19979,
+    "start": "2024-10-06T15:56:16.174Z",
+    "end": "2024-10-06T15:56:34.935Z",
+    "duration": 18761,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8804c8d0-40ea-4ad9-9d5f-360122760ac5",
+      "uuid": "00f81606-f646-44ae-93a6-d42be411b759",
       "title": "",
       "fullFile": "cypress\\e2e\\SignupServerErrors.cy.js",
       "file": "cypress\\e2e\\SignupServerErrors.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "615112d3-8879-4836-b82b-b220683429ae",
+          "uuid": "feafd331-b25f-461d-9fa3-59adebddca34",
           "title": "Signup Server Errors",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "handles 500 error on signup attempt",
               "fullTitle": "Signup Server Errors handles 500 error on signup attempt",
               "timedOut": null,
-              "duration": 5374,
+              "duration": 5038,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.intercept('POST', '/api/v1/open/auth/sign-up', {\n  statusCode: 500\n}).as('signupRequest');\ncy.CompletePage1();\ncy.CompletePage2();\nsignup.getHeading().should('contain', 'Something went wrong');",
               "err": {},
-              "uuid": "9f3051a0-8460-4585-adee-47725383f6d2",
-              "parentUUID": "615112d3-8879-4836-b82b-b220683429ae",
+              "uuid": "c58955f1-8b45-4c1a-beb2-11a6943e4e74",
+              "parentUUID": "feafd331-b25f-461d-9fa3-59adebddca34",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "displays **No Options** placeholder when countries are not loaded",
               "fullTitle": "Signup Server Errors displays **No Options** placeholder when countries are not loaded",
               "timedOut": null,
-              "duration": 2286,
+              "duration": 2160,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.intercept('GET', '/api/v1/open/filters/countries', {\n  statusCode: 400\n}).as('countriesRequest');\ncy.CompletePage1();\nsignup.getCountrySelect().click();\ncy.contains('No options').should('be.visible');",
               "err": {},
-              "uuid": "5f98a705-44ec-42a9-a74a-a212e0d97f94",
-              "parentUUID": "615112d3-8879-4836-b82b-b220683429ae",
+              "uuid": "0545037e-81c1-4e78-986c-cc22e2b0b8d6",
+              "parentUUID": "feafd331-b25f-461d-9fa3-59adebddca34",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "displays loading state during slow network request for signup",
               "fullTitle": "Signup Server Errors displays loading state during slow network request for signup",
               "timedOut": null,
-              "duration": 9880,
+              "duration": 9724,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.intercept('POST', '/api/v1/open/auth/sign-up', req => {\n  req.on('response', res => {\n    res.setDelay(5000);\n  });\n}).as('slowSignupRequest');\ncy.CompletePage1();\ncy.CompletePage2();\n// Check if button is disabled while loading\nsignup.getCreateAccountButton().should('be.disabled');\n// Wait for the request\ncy.wait('@slowSignupRequest');\n// Verify that the user is redirected to the expected page after signup\nsignup.getHeading().should('contain', 'CEEZER');\nsignup.getCreateAccountButton().should('not.exist');",
               "err": {},
-              "uuid": "66b177ae-b2e9-49eb-b8ee-350beea29246",
-              "parentUUID": "615112d3-8879-4836-b82b-b220683429ae",
+              "uuid": "3f9273b8-08a4-4a6c-be06-524c74cdb501",
+              "parentUUID": "feafd331-b25f-461d-9fa3-59adebddca34",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9f3051a0-8460-4585-adee-47725383f6d2",
-            "5f98a705-44ec-42a9-a74a-a212e0d97f94",
-            "66b177ae-b2e9-49eb-b8ee-350beea29246"
+            "c58955f1-8b45-4c1a-beb2-11a6943e4e74",
+            "0545037e-81c1-4e78-986c-cc22e2b0b8d6",
+            "3f9273b8-08a4-4a6c-be06-524c74cdb501"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17540,
+          "duration": 16922,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

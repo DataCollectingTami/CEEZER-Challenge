@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-10-05T17:06:17.518Z",
-    "end": "2024-10-05T17:06:26.304Z",
-    "duration": 8786,
+    "start": "2024-10-06T15:55:48.982Z",
+    "end": "2024-10-06T15:55:58.593Z",
+    "duration": 9611,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c88298e8-064e-4b4d-a92e-2bc62143470d",
+      "uuid": "c6dd1037-bd02-4b0a-8720-f4eff2aa9361",
       "title": "",
       "fullFile": "cypress\\e2e\\SignupFlow.cy.js",
       "file": "cypress\\e2e\\SignupFlow.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "33afbfff-51a7-45fb-84d1-fa3f4183599b",
+          "uuid": "817bc668-ee01-4364-974e-076cfa2c1541",
           "title": "Signup Flow",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "completes the signup flow",
               "fullTitle": "Signup Flow completes the signup flow",
               "timedOut": null,
-              "duration": 6766,
+              "duration": 5778,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "signup.getLogo().should(\"be.visible\");\ncy.fixture('SingupData.json').then(data => {\n  const {\n    validSignup\n  } = data;\n  //Page 1\n  signup.getSelectBuyerButton().click();\n  signup.fillCompanyNameInput(validSignup.companyName);\n  signup.fillEmailInput(validSignup.email);\n  signup.fillFirstNameInput(validSignup.firstName);\n  signup.fillLastNameInput(validSignup.lastName);\n  signup.getSignUpButton().click();\n  signup.getCreateAccountButton().should(\"be.visible\");\n  //Page 2\n  signup.fillRegistrationNumberInput(validSignup.registrationNumber);\n  signup.fillVatNumberInput(validSignup.vatNumber);\n  signup.fillAddressInput(validSignup.address);\n  signup.fillCityInput(validSignup.city);\n  signup.fillZipInput(validSignup.zip);\n  signup.getCountrySelect().click();\n  signup.getCountrySelectItem(0).click();\n  signup.getIndustrySelect().click();\n  signup.getIndustrySelectItem(0).click();\n  signup.getCreateAccountButton().click();\n  signup.getHeading().should(\"contain\", \"CEEZER\");\n  signup.getCreateAccountButton().should(\"not.exist\");\n});",
               "err": {},
-              "uuid": "cc9ecbc6-360d-4e8c-8542-fc3ef571f764",
-              "parentUUID": "33afbfff-51a7-45fb-84d1-fa3f4183599b",
+              "uuid": "cfac6795-2747-405e-9292-712b6fccbb77",
+              "parentUUID": "817bc668-ee01-4364-974e-076cfa2c1541",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cc9ecbc6-360d-4e8c-8542-fc3ef571f764"
+            "cfac6795-2747-405e-9292-712b6fccbb77"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6766,
+          "duration": 5778,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-06T15:56:36.654Z",
+    "end": "2024-10-06T15:56:46.205Z",
+    "duration": 9551,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02cc18b9-d02b-4b67-a8a6-f0db56daf314",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SignupVisualTests.cy.js",
+      "file": "cypress\\e2e\\SignupVisualTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+          "title": "Signup Visual Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "visually tests the CEEZER logo",
+              "fullTitle": "Signup Visual Tests visually tests the CEEZER logo",
+              "timedOut": null,
+              "duration": 1696,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "signup.getLogo().matchImageSnapshot('Desktop-Logo', {\n  failureThreshold: 0.4,\n  blur: 10\n});",
+              "err": {},
+              "uuid": "b04d690a-e5c2-4a38-9f0e-1df92e4c2501",
+              "parentUUID": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "visually tests the first page of signup",
+              "fullTitle": "Signup Visual Tests visually tests the first page of signup",
+              "timedOut": null,
+              "duration": 3090,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.matchImageSnapshot('Desktop-signup-page-1', {\n  failureThreshold: 0.4,\n  blur: 10\n});",
+              "err": {},
+              "uuid": "7f000b8a-b616-4ddc-b405-0b5f41f34b61",
+              "parentUUID": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "visually tests the second page of signup",
+              "fullTitle": "Signup Visual Tests visually tests the second page of signup",
+              "timedOut": null,
+              "duration": 2770,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.CompletePage1();\ncy.matchImageSnapshot('Desktop-signup-page-2', {\n  failureThreshold: 0.4,\n  blur: 10\n});",
+              "err": {},
+              "uuid": "fb230d49-4a3b-40ba-a053-f87aae270af3",
+              "parentUUID": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b04d690a-e5c2-4a38-9f0e-1df92e4c2501",
+            "7f000b8a-b616-4ddc-b405-0b5f41f34b61",
+            "fb230d49-4a3b-40ba-a053-f87aae270af3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7556,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

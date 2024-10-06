@@ -1,9 +1,9 @@
 import Signup from "./Signup.js";
 import SignupData from "../fixtures/SingupData.json";
 
+
 const signup = new Signup();
 const { validSignup } = SignupData;
-
 
 Cypress.Commands.add('skipMobile', (test) => {
     cy.window().then((win) => {

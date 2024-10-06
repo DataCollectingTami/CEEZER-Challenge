@@ -1,24 +1,24 @@
 {
   "stats": {
-    "suites": 4,
-    "tests": 12,
-    "passes": 12,
+    "suites": 5,
+    "tests": 15,
+    "passes": 15,
     "pending": 0,
     "failures": 0,
-    "testsRegistered": 12,
+    "testsRegistered": 15,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-10-05T17:06:06.814Z",
-    "end": "2024-10-05T17:07:06.279Z",
-    "duration": 59465
+    "start": "2024-10-06T15:55:37.983Z",
+    "end": "2024-10-06T15:56:46.205Z",
+    "duration": 68222
   },
   "results": [
     {
-      "uuid": "c88298e8-064e-4b4d-a92e-2bc62143470d",
+      "uuid": "c6dd1037-bd02-4b0a-8720-f4eff2aa9361",
       "title": "",
       "fullFile": "cypress\\e2e\\SignupFlow.cy.js",
       "file": "cypress\\e2e\\SignupFlow.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "33afbfff-51a7-45fb-84d1-fa3f4183599b",
+          "uuid": "817bc668-ee01-4364-974e-076cfa2c1541",
           "title": "Signup Flow",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "completes the signup flow",
               "fullTitle": "Signup Flow completes the signup flow",
               "timedOut": null,
-              "duration": 6766,
+              "duration": 5778,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "signup.getLogo().should(\"be.visible\");\ncy.fixture('SingupData.json').then(data => {\n  const {\n    validSignup\n  } = data;\n  //Page 1\n  signup.getSelectBuyerButton().click();\n  signup.fillCompanyNameInput(validSignup.companyName);\n  signup.fillEmailInput(validSignup.email);\n  signup.fillFirstNameInput(validSignup.firstName);\n  signup.fillLastNameInput(validSignup.lastName);\n  signup.getSignUpButton().click();\n  signup.getCreateAccountButton().should(\"be.visible\");\n  //Page 2\n  signup.fillRegistrationNumberInput(validSignup.registrationNumber);\n  signup.fillVatNumberInput(validSignup.vatNumber);\n  signup.fillAddressInput(validSignup.address);\n  signup.fillCityInput(validSignup.city);\n  signup.fillZipInput(validSignup.zip);\n  signup.getCountrySelect().click();\n  signup.getCountrySelectItem(0).click();\n  signup.getIndustrySelect().click();\n  signup.getIndustrySelectItem(0).click();\n  signup.getCreateAccountButton().click();\n  signup.getHeading().should(\"contain\", \"CEEZER\");\n  signup.getCreateAccountButton().should(\"not.exist\");\n});",
               "err": {},
-              "uuid": "cc9ecbc6-360d-4e8c-8542-fc3ef571f764",
-              "parentUUID": "33afbfff-51a7-45fb-84d1-fa3f4183599b",
+              "uuid": "cfac6795-2747-405e-9292-712b6fccbb77",
+              "parentUUID": "817bc668-ee01-4364-974e-076cfa2c1541",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cc9ecbc6-360d-4e8c-8542-fc3ef571f764"
+            "cfac6795-2747-405e-9292-712b6fccbb77"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 6766,
+          "duration": 5778,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -76,7 +76,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "3983d520-8238-4f1b-9809-c0edc9479b5c",
+      "uuid": "21c9b682-b508-4cc8-9dd8-4ff7968fa81f",
       "title": "",
       "fullFile": "cypress\\e2e\\SignupPage.cy.js",
       "file": "cypress\\e2e\\SignupPage.cy.js",
@@ -85,7 +85,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "77a9d6fa-ed90-47ab-9d23-43f6bfbf8b23",
+          "uuid": "718ab0e1-51a6-4a85-a0bb-b30e8a1493cd",
           "title": "Signup Page",
           "fullFile": "",
           "file": "",
@@ -94,7 +94,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+              "uuid": "0c4bf0b8-49a4-4aab-9396-72aaed7a8590",
               "title": "Valid Signup Actions",
               "fullFile": "",
               "file": "",
@@ -105,7 +105,7 @@
                   "title": "toggles between Buyer and Supplier",
                   "fullTitle": "Signup Page Valid Signup Actions toggles between Buyer and Supplier",
                   "timedOut": null,
-                  "duration": 1873,
+                  "duration": 1533,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -114,8 +114,8 @@
                   "context": null,
                   "code": "//toggle buyer \nsignup.getSelectBuyerButton().click();\nsignup.getSelectBuyerButton().should(\"have.class\", \"css-yjcvqi\");\ncy.skipMobile(() => {\n  cy.contains(\"Future-proof carbon credit portfolios—guided by data.\").should(\"be.visible\");\n}); // only visible on desktop\n//toggle supplier\nsignup.getSelectSupplierButton().click();\nsignup.getSelectSupplierButton().should(\"have.class\", \"css-yjcvqi\");\ncy.skipMobile(() => {\n  cy.contains(\"Join global net-zero portfolios—seamlessly.\").should(\"be.visible\");\n}); // only visible on desktop",
                   "err": {},
-                  "uuid": "acbb3918-28a7-4330-ba43-e9cde680802e",
-                  "parentUUID": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+                  "uuid": "96298d98-e441-41fb-8e6a-60d37c9538a6",
+                  "parentUUID": "0c4bf0b8-49a4-4aab-9396-72aaed7a8590",
                   "isHook": false,
                   "skipped": false
                 },
@@ -123,7 +123,7 @@
                   "title": "navigates to the login page",
                   "fullTitle": "Signup Page Valid Signup Actions navigates to the login page",
                   "timedOut": null,
-                  "duration": 988,
+                  "duration": 1238,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -132,8 +132,8 @@
                   "context": null,
                   "code": "//via login button\nsignup.getLoginButton().click();\ncy.url().should(\"include\", \"/sign-in\");\n//via logo\nsignup.getLogo().click();\ncy.url().should(\"include\", \"/sign-in\");",
                   "err": {},
-                  "uuid": "749f888b-3b91-45bd-841a-0c9ca1178551",
-                  "parentUUID": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+                  "uuid": "540ea963-70c2-4715-afc0-c295c7f16834",
+                  "parentUUID": "0c4bf0b8-49a4-4aab-9396-72aaed7a8590",
                   "isHook": false,
                   "skipped": false
                 },
@@ -141,7 +141,7 @@
                   "title": "tests back button on Page 2 and checks if data is saved",
                   "fullTitle": "Signup Page Valid Signup Actions tests back button on Page 2 and checks if data is saved",
                   "timedOut": null,
-                  "duration": 2322,
+                  "duration": 2248,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -150,28 +150,28 @@
                   "context": null,
                   "code": "cy.CompletePage1();\nsignup.getBackButton().should(\"be.visible\");\nsignup.getBackButton().click();\n//assert that we are on Page 1\nsignup.getSignUpButton().should(\"be.visible\");\nsignup.getCreateAccountButton().should(\"not.exist\");\n//assert that the data is saved\nsignup.getCompanyNameInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");\nsignup.getEmailInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");\nsignup.getFirstNameInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");\nsignup.getLastNameInput().invoke(\"attr\", \"value\").should(\"not.be.empty\");",
                   "err": {},
-                  "uuid": "cf0929d0-3aad-4c37-8530-e5fddbecc460",
-                  "parentUUID": "e47b8880-adc9-4aeb-afa6-7c35c7507a4c",
+                  "uuid": "f8e4df10-2b52-4787-b3dc-952b28ca1d5f",
+                  "parentUUID": "0c4bf0b8-49a4-4aab-9396-72aaed7a8590",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "acbb3918-28a7-4330-ba43-e9cde680802e",
-                "749f888b-3b91-45bd-841a-0c9ca1178551",
-                "cf0929d0-3aad-4c37-8530-e5fddbecc460"
+                "96298d98-e441-41fb-8e6a-60d37c9538a6",
+                "540ea963-70c2-4715-afc0-c295c7f16834",
+                "f8e4df10-2b52-4787-b3dc-952b28ca1d5f"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 5183,
+              "duration": 5019,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+              "uuid": "b6dfee5c-ab88-4e47-829f-bfd844799d30",
               "title": "Field Validations",
               "fullFile": "",
               "file": "",
@@ -182,7 +182,7 @@
                   "title": "displays validation error when email format is invalid",
                   "fullTitle": "Signup Page Field Validations displays validation error when email format is invalid",
                   "timedOut": null,
-                  "duration": 2264,
+                  "duration": 2131,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -191,8 +191,8 @@
                   "context": null,
                   "code": "cy.CompletePage1InvalidEmail(\"tami email com\");\nsignup.getSignUpButton().click();\nsignup.getEmailInput().invoke(\"attr\", \"aria-invalid\").should(\"eq\", \"true\");\ncy.contains(\"Please enter a company email address\").should(\"be.visible\");",
                   "err": {},
-                  "uuid": "ca008de7-2016-4ca8-9d13-2ed25b3eff75",
-                  "parentUUID": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+                  "uuid": "b41f6f0f-9937-4920-a1f5-51660ed236f5",
+                  "parentUUID": "b6dfee5c-ab88-4e47-829f-bfd844799d30",
                   "isHook": false,
                   "skipped": false
                 },
@@ -200,7 +200,7 @@
                   "title": "displays validation error when personal email is used",
                   "fullTitle": "Signup Page Field Validations displays validation error when personal email is used",
                   "timedOut": null,
-                  "duration": 3139,
+                  "duration": 2003,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -209,8 +209,8 @@
                   "context": null,
                   "code": "cy.CompletePage1InvalidEmail(\"tami@gmail.com\");\nsignup.getSignUpButton().click();\nsignup.getEmailInput().invoke(\"attr\", \"aria-invalid\").should(\"eq\", \"true\");\ncy.contains(\"Please enter a company email address\").should(\"be.visible\");\n//TODO: extend to check other emails that are not allowed",
                   "err": {},
-                  "uuid": "74eb6ce8-2e9f-40db-b336-5382396e0658",
-                  "parentUUID": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+                  "uuid": "be1ea0ff-a51e-47e7-8b0d-a79cf0f73e8f",
+                  "parentUUID": "b6dfee5c-ab88-4e47-829f-bfd844799d30",
                   "isHook": false,
                   "skipped": false
                 },
@@ -218,7 +218,7 @@
                   "title": "checks validation for empty fields on Page 1",
                   "fullTitle": "Signup Page Field Validations checks validation for empty fields on Page 1",
                   "timedOut": null,
-                  "duration": 3070,
+                  "duration": 2779,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -227,22 +227,22 @@
                   "context": null,
                   "code": "const fields = [{\n  name: \"CompanyName\",\n  message: \"company name\",\n  value: \"Tami Tests Inc\"\n}, {\n  name: \"Email\",\n  message: \"email\",\n  value: \"tami@testinc.com\"\n}, {\n  name: \"FirstName\",\n  message: \"first name\",\n  value: \"Tami\"\n}, {\n  name: \"LastName\",\n  message: \"last name\",\n  value: \"Tests\"\n}];\nsignup.getSignUpButton().click();\n//check validation error for empty fields\ncy.contains(\"Please select account type\").should(\"be.visible\");\nfields.forEach(field => {\n  signup[`get${field.name}Input`]().invoke(\"attr\", \"aria-invalid\").should(\"eq\", \"true\");\n  cy.contains(`Please enter your ${field.message}`).should(\"be.visible\");\n});\n//check that error is hidden when field is filled\nfields.forEach(field => {\n  signup[`fill${field.name}Input`](field.value);\n  signup.getSignUpButton().click();\n  signup[`get${field.name}Input`]().invoke(\"attr\", \"aria-invalid\").should(\"not.exist\");\n  cy.contains(`Please enter your ${field.message}`).should(\"not.exist\");\n});\n//check account type error is hidden when toggled\nsignup.getLastNameInput().clear();\nsignup.getSelectBuyerButton().click();\nsignup.getSignUpButton().click();\ncy.contains(\"Please select account type\").should(\"not.exist\");",
                   "err": {},
-                  "uuid": "81ef9438-f2bb-4941-b1f4-5ba03d26de83",
-                  "parentUUID": "5cbd09ca-ad0f-4367-9348-7f9dd8320880",
+                  "uuid": "794a42d3-7a8e-4614-a1c8-2fb3e34c7a05",
+                  "parentUUID": "b6dfee5c-ab88-4e47-829f-bfd844799d30",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "ca008de7-2016-4ca8-9d13-2ed25b3eff75",
-                "74eb6ce8-2e9f-40db-b336-5382396e0658",
-                "81ef9438-f2bb-4941-b1f4-5ba03d26de83"
+                "b41f6f0f-9937-4920-a1f5-51660ed236f5",
+                "be1ea0ff-a51e-47e7-8b0d-a79cf0f73e8f",
+                "794a42d3-7a8e-4614-a1c8-2fb3e34c7a05"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 8473,
+              "duration": 6913,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -268,7 +268,7 @@
       "_timeout": 2000
     },
     {
-      "uuid": "8804c8d0-40ea-4ad9-9d5f-360122760ac5",
+      "uuid": "00f81606-f646-44ae-93a6-d42be411b759",
       "title": "",
       "fullFile": "cypress\\e2e\\SignupServerErrors.cy.js",
       "file": "cypress\\e2e\\SignupServerErrors.cy.js",
@@ -277,7 +277,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "615112d3-8879-4836-b82b-b220683429ae",
+          "uuid": "feafd331-b25f-461d-9fa3-59adebddca34",
           "title": "Signup Server Errors",
           "fullFile": "",
           "file": "",
@@ -288,7 +288,7 @@
               "title": "handles 500 error on signup attempt",
               "fullTitle": "Signup Server Errors handles 500 error on signup attempt",
               "timedOut": null,
-              "duration": 5374,
+              "duration": 5038,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -297,8 +297,8 @@
               "context": null,
               "code": "cy.intercept('POST', '/api/v1/open/auth/sign-up', {\n  statusCode: 500\n}).as('signupRequest');\ncy.CompletePage1();\ncy.CompletePage2();\nsignup.getHeading().should('contain', 'Something went wrong');",
               "err": {},
-              "uuid": "9f3051a0-8460-4585-adee-47725383f6d2",
-              "parentUUID": "615112d3-8879-4836-b82b-b220683429ae",
+              "uuid": "c58955f1-8b45-4c1a-beb2-11a6943e4e74",
+              "parentUUID": "feafd331-b25f-461d-9fa3-59adebddca34",
               "isHook": false,
               "skipped": false
             },
@@ -306,7 +306,7 @@
               "title": "displays **No Options** placeholder when countries are not loaded",
               "fullTitle": "Signup Server Errors displays **No Options** placeholder when countries are not loaded",
               "timedOut": null,
-              "duration": 2286,
+              "duration": 2160,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -315,8 +315,8 @@
               "context": null,
               "code": "cy.intercept('GET', '/api/v1/open/filters/countries', {\n  statusCode: 400\n}).as('countriesRequest');\ncy.CompletePage1();\nsignup.getCountrySelect().click();\ncy.contains('No options').should('be.visible');",
               "err": {},
-              "uuid": "5f98a705-44ec-42a9-a74a-a212e0d97f94",
-              "parentUUID": "615112d3-8879-4836-b82b-b220683429ae",
+              "uuid": "0545037e-81c1-4e78-986c-cc22e2b0b8d6",
+              "parentUUID": "feafd331-b25f-461d-9fa3-59adebddca34",
               "isHook": false,
               "skipped": false
             },
@@ -324,7 +324,7 @@
               "title": "displays loading state during slow network request for signup",
               "fullTitle": "Signup Server Errors displays loading state during slow network request for signup",
               "timedOut": null,
-              "duration": 9880,
+              "duration": 9724,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -333,22 +333,22 @@
               "context": null,
               "code": "cy.intercept('POST', '/api/v1/open/auth/sign-up', req => {\n  req.on('response', res => {\n    res.setDelay(5000);\n  });\n}).as('slowSignupRequest');\ncy.CompletePage1();\ncy.CompletePage2();\n// Check if button is disabled while loading\nsignup.getCreateAccountButton().should('be.disabled');\n// Wait for the request\ncy.wait('@slowSignupRequest');\n// Verify that the user is redirected to the expected page after signup\nsignup.getHeading().should('contain', 'CEEZER');\nsignup.getCreateAccountButton().should('not.exist');",
               "err": {},
-              "uuid": "66b177ae-b2e9-49eb-b8ee-350beea29246",
-              "parentUUID": "615112d3-8879-4836-b82b-b220683429ae",
+              "uuid": "3f9273b8-08a4-4a6c-be06-524c74cdb501",
+              "parentUUID": "feafd331-b25f-461d-9fa3-59adebddca34",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9f3051a0-8460-4585-adee-47725383f6d2",
-            "5f98a705-44ec-42a9-a74a-a212e0d97f94",
-            "66b177ae-b2e9-49eb-b8ee-350beea29246"
+            "c58955f1-8b45-4c1a-beb2-11a6943e4e74",
+            "0545037e-81c1-4e78-986c-cc22e2b0b8d6",
+            "3f9273b8-08a4-4a6c-be06-524c74cdb501"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17540,
+          "duration": 16922,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -364,7 +364,103 @@
       "_timeout": 2000
     },
     {
-      "uuid": "156769b7-b5dd-4236-8a7b-a107c725c8f0",
+      "uuid": "02cc18b9-d02b-4b67-a8a6-f0db56daf314",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SignupVisualTests.cy.js",
+      "file": "cypress\\e2e\\SignupVisualTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+          "title": "Signup Visual Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "visually tests the CEEZER logo",
+              "fullTitle": "Signup Visual Tests visually tests the CEEZER logo",
+              "timedOut": null,
+              "duration": 1696,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "signup.getLogo().matchImageSnapshot('Desktop-Logo', {\n  failureThreshold: 0.4,\n  blur: 10\n});",
+              "err": {},
+              "uuid": "b04d690a-e5c2-4a38-9f0e-1df92e4c2501",
+              "parentUUID": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "visually tests the first page of signup",
+              "fullTitle": "Signup Visual Tests visually tests the first page of signup",
+              "timedOut": null,
+              "duration": 3090,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.matchImageSnapshot('Desktop-signup-page-1', {\n  failureThreshold: 0.4,\n  blur: 10\n});",
+              "err": {},
+              "uuid": "7f000b8a-b616-4ddc-b405-0b5f41f34b61",
+              "parentUUID": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "visually tests the second page of signup",
+              "fullTitle": "Signup Visual Tests visually tests the second page of signup",
+              "timedOut": null,
+              "duration": 2770,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.CompletePage1();\ncy.matchImageSnapshot('Desktop-signup-page-2', {\n  failureThreshold: 0.4,\n  blur: 10\n});",
+              "err": {},
+              "uuid": "fb230d49-4a3b-40ba-a053-f87aae270af3",
+              "parentUUID": "8b7cd247-eb33-4a3a-9459-b760c1d8c5cf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b04d690a-e5c2-4a38-9f0e-1df92e4c2501",
+            "7f000b8a-b616-4ddc-b405-0b5f41f34b61",
+            "fb230d49-4a3b-40ba-a053-f87aae270af3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7556,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6e0c1cbb-61af-48de-86e1-3c66c9c5e952",
       "title": "",
       "fullFile": "cypress\\e2e\\SignupAlly.cy.js",
       "file": "cypress\\e2e\\SignupAlly.cy.js",
@@ -373,7 +469,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4d52151a-2bed-421d-aef5-cac2b55b3e2f",
+          "uuid": "c81b8d35-8a63-4c3b-a5f1-8f8a91225ed5",
           "title": "Signup Page Accessibility",
           "fullFile": "",
           "file": "",
@@ -384,7 +480,7 @@
               "title": "checks and logs all accessibility violations on load for Page 1",
               "fullTitle": "Signup Page Accessibility checks and logs all accessibility violations on load for Page 1",
               "timedOut": null,
-              "duration": 2866,
+              "duration": 3198,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -393,8 +489,8 @@
               "context": null,
               "code": "cy.checkA11y(null, null, violations => logViolations(violations, \"Page 1\"), true);",
               "err": {},
-              "uuid": "b340fd37-91e7-4209-bd66-23a77dc5a1dc",
-              "parentUUID": "4d52151a-2bed-421d-aef5-cac2b55b3e2f",
+              "uuid": "83ad9437-d5a7-4476-9f25-1bd90737b3a0",
+              "parentUUID": "c81b8d35-8a63-4c3b-a5f1-8f8a91225ed5",
               "isHook": false,
               "skipped": false
             },
@@ -402,7 +498,7 @@
               "title": "checks and logs all accessibility violations on load for Page 2   ",
               "fullTitle": "Signup Page Accessibility checks and logs all accessibility violations on load for Page 2   ",
               "timedOut": null,
-              "duration": 2729,
+              "duration": 3089,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -411,21 +507,21 @@
               "context": null,
               "code": "cy.CompletePage1();\ncy.checkA11y(null, null, violations => logViolations(violations, \"Page 2\"), true);",
               "err": {},
-              "uuid": "0d4dfbaf-372b-4959-8e3e-fcc38ec04616",
-              "parentUUID": "4d52151a-2bed-421d-aef5-cac2b55b3e2f",
+              "uuid": "d20b2402-d780-43f1-a5ef-6c638395e159",
+              "parentUUID": "c81b8d35-8a63-4c3b-a5f1-8f8a91225ed5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b340fd37-91e7-4209-bd66-23a77dc5a1dc",
-            "0d4dfbaf-372b-4959-8e3e-fcc38ec04616"
+            "83ad9437-d5a7-4476-9f25-1bd90737b3a0",
+            "d20b2402-d780-43f1-a5ef-6c638395e159"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5595,
+          "duration": 6287,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
